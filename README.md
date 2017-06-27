@@ -1,6 +1,6 @@
 # Taller de Matemática y Física para videojuegos
 Dentro del marco **Jornada Matemática en Movimiento FOMA 2017** en la UTN Buenos Aires
-[Noticia de FOMA - UTNBA En Movimiento](https://blog.frba.utn.edu.ar/utnbaenmovimiento/jornada-matematica-en-movimiento-foma-2016-en-la-utn-buenos-aires/)
+[Noticia de FOMA - UTNBA En Movimiento](https://www.frba.utn.edu.ar/se-realizo-la-4o-jornada-matematica-movimiento-la-utnba/)
 
 
 ## Referencia a materia de Técnicas Gráficas por Computador
