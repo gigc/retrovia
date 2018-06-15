@@ -31,41 +31,41 @@ var _world = new World();
 
 var init = false;
 
-function Update() 
+function Update()
 {
     _world.Update(elapsed_time);
 }
 
-function Render() 
+function Render()
 {
     if (canvas.getContext)
     {
         // borro la pantalla
         ctx.fillStyle = 'rgba(0,0,0,255)';
         ctx.fillRect(0,0,2000,2000);
-		// dibujo la escena esquematica con el motor 
+		// dibujo la escena esquematica con el motor
 	    _world.Render(ctx,ox,oy,ex,ey);
     }
 }
 
 
-function RenderLoop() 
+function RenderLoop()
 {
     if (!init)
 		return;
-    
+
 	Update();
 	Render();
 }
 
 
-function doKeyDown(e) 
+function doKeyDown(e)
 {
-	var xPos = (mouse_x-ox)/ ex; 
-	var yPos = (mouse_y-oy)/ ey; 
+	var xPos = (mouse_x-ox)/ ex;
+	var yPos = (mouse_y-oy)/ ey;
 }
 
-function onMouseMove() 
+function onMouseMove()
 {
 	var xPos = window.event.offsetX;
 	var yPos = window.event.offsetY;
@@ -110,19 +110,19 @@ function onMouseUp(e) {
 function loadscene()
 {
 	// Creo un piso
-    var p = _world.AddBox(40, 60, 80, 5);
-    p.SetStatic();
+  var p = _world.AddBox(40, 60, 80, 5);
+  p.SetStatic();
 	p.color = 'rgb(255,0,255)';
 
 	// Creo un circulo
-    p = _world.AddCircle(40,0,2);
-    
-    init = true;
+  var c = _world.AddCircle(40,0,2);
+
+  init = true;
 
 }
 
 function main()
-{   
+{
 	document.addEventListener( "keydown", doKeyDown, true);
 	document.addEventListener("mousemove", onMouseMove, true);
 	document.addEventListener("mousedown", onMouseDown, true);
@@ -130,11 +130,11 @@ function main()
 
     canvas = document.getElementById('mycanvas');
     ctx = canvas.getContext('2d');
-	
+
 	loadscene();
-	
+
     setInterval(RenderLoop, elapsed_time * 1000);
-} 
+}
 
 
 </script>
@@ -143,4 +143,3 @@ function main()
 	<canvas id="mycanvas" width="1000" height="700"></canvas>
 </body>
 </html>
- 
